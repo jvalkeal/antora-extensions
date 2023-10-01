@@ -38,6 +38,7 @@
     "./tabs-migration-extension": "./lib/tabs-migration-extension.js",
     "./static-page-extension": "./lib/static-page-extension.js",
     "./cache-scandir": "./lib/cache-scandir/index.js",
+    "./asciinema-extension": "./lib/asciinema-extension.js",
     "./static-pages/search": "./lib/static/search.adoc"
   },
   "imports": {

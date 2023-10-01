@@ -53,7 +53,8 @@
     "archiver": "^5.3.1",
     "decompress": "4.2.1",
     "fast-xml-parser": "latest",
-    "handlebars": "latest"
+    "handlebars": "latest",
+    "asciinema-player": "^3.6.1"
   },
   "devDependencies": {
     "@asciidoctor/tabs": "latest",

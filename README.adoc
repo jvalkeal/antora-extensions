@@ -285,7 +285,15 @@ The extension will also insert an empty line between tabs if one does not exist.
 
 IMPORTANT: Be sure to register this extension under the `antora.extensions` key in the playbook, not the `asciidoc.extensions` key!
 
-The purpose of this extension is to convert asciidoc block type _asciinema_ into an asciinema-player.
+NOTE: Using this extension will need a little help from an
+UI bundle as it is expected that named partials `asciinema-scripts`
+and `asciinema-styles` are included in a same locations where
+javascript and styles are loaded. Extension will add these partials
+if those don't already exist in an UI bundle.
+
+The purpose of this extension is to convert asciidoc block type _asciinema_ into an asciinema-player. Expected content is plain
+cast file which is automatically extracted and packaged with
+into antora assets and configured with player instances.
 
 [source,text]
 ----
@@ -296,6 +304,9 @@ The purpose of this extension is to convert asciidoc block type _asciinema_ into
 [2.0, "o", "world!"]
 ....
 ----
+
+TIP: You don't need to inline cast file as it can also come
+via asciidoc include macro.
 
 The extension accepts several configuration options as defined in
 https://github.com/asciinema/asciinema-player#options.

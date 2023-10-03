@@ -58,6 +58,7 @@
   },
   "devDependencies": {
     "@asciidoctor/tabs": "latest",
+    "@asciidoctor/core": "latest",
     "chai": "~4.3",
     "chai-fs": "~2.0",
     "chai-spies": "~1.0",

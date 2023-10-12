@@ -106,11 +106,11 @@ describe('asciinema-extension', () => {
   })
 
   describe('uiLoaded', () => {
-    it('should add js, css and templates', async () => {
+    it('should add js, css, helpers and templates', async () => {
       ext.register.call(generatorContext, { config: {} })
       generatorContext.updateVariables({ contentCatalog, playbook, siteAsciiDocConfig, uiCatalog })
       await generatorContext.uiLoaded(generatorContext.variables)
-      expect(uiCatalog.files.length).to.equal(4)
+      expect(uiCatalog.files.length).to.equal(7)
     })
   })
 
@@ -129,7 +129,7 @@ describe('asciinema-extension', () => {
       await generatorContext.contentClassified(generatorContext.variables)
 
       const registry = asciidoctor.Extensions.create()
-      siteAsciiDocConfig.extensions[0].register.call({}, registry, {})
+      siteAsciiDocConfig.extensions[0].register.call({}, registry, { file: { asciidoc: {attributes: {} } } })
       const out = asciidoctor.convert(input, {extension_registry: registry});
 
       expect(siteAsciiDocConfig.extensions.length).to.equal(1)

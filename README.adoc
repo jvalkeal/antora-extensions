@@ -286,10 +286,10 @@ The extension will also insert an empty line between tabs if one does not exist.
 IMPORTANT: Be sure to register this extension under the `antora.extensions` key in the playbook, not the `asciidoc.extensions` key!
 
 NOTE: Using this extension will need a little help from an
-UI bundle as it is expected that named partials `asciinema-scripts`
-and `asciinema-styles` are included in a same locations where
-javascript and styles are loaded. Extension will add these partials
-if those don't already exist in an UI bundle.
+UI bundle as it is expected that named partials `asciinema-load-scripts`,
+`asciinema-create-scripts` and `asciinema-styles` are included in a same
+locations where javascript and styles are loaded. Extension will add these
+partials if those don't already exist in an UI bundle.
 
 The purpose of this extension is to convert asciidoc block type _asciinema_ into an asciinema-player. Expected content is plain
 cast file which is automatically extracted and packaged with
